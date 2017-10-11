@@ -10,4 +10,14 @@
 #
 
 class Appointment < ApplicationRecord
+    validates :name, :time, presence: true
+    validates :name, length: { minimum: 3 }
+
+    validate :time_cannot_be_in_past
+
+    private
+
+        def time_cannot_be_in_past
+           errors.add(:time, "can't be in the past") if time.present? && time < Time.now
+        end
 end
