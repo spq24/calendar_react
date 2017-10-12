@@ -15,6 +15,8 @@ class Appointment < ApplicationRecord
 
     validate :time_cannot_be_in_past
 
+    belongs_to :user
+
     private
 
         def time_cannot_be_in_past

@@ -1,7 +1,6 @@
 import ReactOnRails from 'react-on-rails';
-
-import Appointments from '../bundles/Appointments/components/appointments';
+import AppRouter from '../bundles/Appointments/components/AppRouter';
 
 ReactOnRails.register({
-  Appointments,
+  AppRouter,
 });

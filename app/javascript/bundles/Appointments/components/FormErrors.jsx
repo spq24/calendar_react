@@ -7,7 +7,7 @@ export const FormErrors = ({formErrors}) =>
             return (
                 formErrors[formErrorField].map((error) => {
                     return (
-                        <p>{formErrorField} {error}</p>
+                        <p key={error}>{formErrorField} {error}</p>
                     )
                 })
             )
