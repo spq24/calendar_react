@@ -13,6 +13,9 @@ gem 'haml'
 gem 'react_on_rails'
 gem 'webpacker', '~> 3.0'
 gem 'devise'
+gem 'rack-cors', require: 'rack/cors'
+gem 'devise_token_auth'
+gem 'omniauth'
 
 group :development, :test do
   gem 'byebug', platform: :mri

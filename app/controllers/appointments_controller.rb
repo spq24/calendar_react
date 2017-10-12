@@ -1,5 +1,4 @@
 class AppointmentsController < ApplicationController
-    before_action :authenticate_user!
     before_action :set_appointment, only: [:edit, :update, :show, :destroy]
 
     def create
@@ -31,11 +30,7 @@ class AppointmentsController < ApplicationController
     def index
         @appointment = current_user.appointments.new
         @appointments = current_user.appointments.order('time ASC')
-
-        respond_to do |format|
-            format.html
-            format.json { render json: @appointments }
-        end
+        render json: @appointments
     end
 
 
